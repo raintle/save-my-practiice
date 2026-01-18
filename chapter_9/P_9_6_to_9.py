@@ -53,10 +53,12 @@ class User:
 class Admin(User):
 
     def __init__(self, first_name, last_name, age, email):
+        """admin初始化"""
         super().__init__(first_name, last_name, age, email)
         self.privileges = Privilege()
 
 class Privilege:
+    """提供privilege的属性"""
 
     def __init__(self):
         self.privileges =['cam ban user', 'can delete post']
@@ -66,6 +68,15 @@ class Privilege:
         print(f"about u privileges:{','.join(self.privileges)}")
 
 if __name__ == '__main__':
+    """
+
+这是Python的内置语法规则，__name__是Python给每个模块的内置变量，值由运行方式决定，不是自定义的
+ 
+1.模块直接运行 → Python自动给__name__赋值为固定字符串"__main__"
+2.模块被导入 → __name__自动变成模块自身的文件名
+3.这个固定写法是Python的约定+语法，改字符串（比如写name=="main"）或变量名，条件都不
+    """
+
     old_people_chicken = Restaurant("Chicken", "north")
     # 创建实例
     old_people_chicken.all_print()
@@ -81,3 +92,7 @@ if __name__ == '__main__':
     admin1 = Admin('adw', 'dwa', 12, '<EMAIL>')
     admin1.privileges.show_privileges()
     admin1.greet_user()
+
+"""
+9-9略
+"""
