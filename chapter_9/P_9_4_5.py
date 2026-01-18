@@ -36,4 +36,42 @@ old_people_chicken.set_number_served(12)
 old_people_chicken.number_served_print()
 old_people_chicken.increase_number_served(12)
 old_people_chicken.number_served_print()
+print('\n')
 
+
+class User:
+    """user的类"""
+    def __init__(self, first_name, last_name, age, email):
+        """初始化user信息"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.email = email
+        self.login_attempts = 0
+
+    def greet_user(self):
+        """向user打招呼"""
+        print(f"hello! {self.first_name} {self.last_name}.")
+
+    def describe_user(self):
+        """描述user"""
+        print(f"\n{self.first_name} {self.last_name} is {self.age} years old.")
+        print('ur email is', self.email)
+
+    def increase_login_attempts(self):
+        self.login_attempts += 1
+        print('now login attempts is', self.login_attempts)
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+        print('now login attempts is', self.login_attempts)
+
+user_1 = User("Chicken", "Chicken", "17", "2162951845@qq.com")
+#创建实例
+user_1.greet_user()
+user_1.describe_user()
+#使用方法
+user_1.increase_login_attempts()
+user_1.increase_login_attempts()
+user_1.increase_login_attempts()
+user_1.reset_login_attempts()
