@@ -62,7 +62,6 @@ class Privilege:
 
     def __init__(self):
         self.privileges =['cam ban user', 'can delete post']
-        print(self.privileges)
 
     def show_privileges(self):
         print(f"about u privileges:{','.join(self.privileges)}")
