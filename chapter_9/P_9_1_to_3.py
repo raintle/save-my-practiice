@@ -51,7 +51,7 @@ class User:
         print(f"\n{self.first_name} {self.last_name} is {self.age} years old.")
         print('ur email is', self.email)
 
-user_1 = User("Chicken", "Chicken", "17", "<EM")
+user_1 = User("Chicken", "Chicken", "17", "2162951845@qq.com")
 #创建实例
 user_1.greet_user()
 user_1.describe_user()
