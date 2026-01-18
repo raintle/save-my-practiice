@@ -54,12 +54,16 @@ class Admin(User):
 
     def __init__(self, first_name, last_name, age, email):
         super().__init__(first_name, last_name, age, email)
-        self.privileges = ['cam ban user', 'can delete post']
+        self.privileges = Privilege()
+
+class Privilege:
+
+    def __init__(self):
+        self.privileges =['cam ban user', 'can delete post']
+        print(self.privileges)
 
     def show_privileges(self):
-        print(f'about u privileges:{', '.join(self.privileges)}')
-
-
+        print(f"about u privileges:{','.join(self.privileges)}")
 
 if __name__ == '__main__':
     old_people_chicken = Restaurant("Chicken", "north")
@@ -75,5 +79,5 @@ if __name__ == '__main__':
     print('\n')
 
     admin1 = Admin('adw', 'dwa', 12, '<EMAIL>')
+    admin1.privileges.show_privileges()
     admin1.greet_user()
-    admin1.show_privileges()
