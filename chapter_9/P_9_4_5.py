@@ -6,6 +6,7 @@ class Restaurant:
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
         self.number_served = 0
+        #设置默认属性值
 
     def describe_restaurant(self):
         """描述餐馆基本信息"""
@@ -23,6 +24,7 @@ class Restaurant:
         print(f"now have {self.number_served} people served")
 
     def set_number_served(self, number_served):
+        #将属性变化调用到类方法中
         self.number_served = number_served
 
     def increase_number_served(self, number_served):
@@ -33,6 +35,7 @@ old_people_chicken = Restaurant("Chicken", "north")
 old_people_chicken.all_print()
 #使用方法
 old_people_chicken.set_number_served(12)
+#使用方法
 old_people_chicken.number_served_print()
 old_people_chicken.increase_number_served(12)
 old_people_chicken.number_served_print()
@@ -74,4 +77,5 @@ user_1.describe_user()
 user_1.increase_login_attempts()
 user_1.increase_login_attempts()
 user_1.increase_login_attempts()
+#使用方法添加值
 user_1.reset_login_attempts()
