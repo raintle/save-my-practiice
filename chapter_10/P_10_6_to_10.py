@@ -10,7 +10,9 @@ def try_int():
             break
     return num
 
-while True:
+
+plus = False
+while plus:
     num1 = try_int()
     num2 = try_int()
     print(num1 + num2)
@@ -18,3 +20,13 @@ while True:
     if quit_ == 'y':
         break
 
+def print_line(file_name):
+    try:
+        with open(file_name, 'r', encoding='utf-8') as FILE:
+            for LINE in FILE:
+                print(LINE)
+    except FileNotFoundError:
+        pass
+
+print_line('cats.txt')
+print_line('dogs.txt')
