@@ -2,4 +2,4 @@
 - 核心：列表推导式、字典键值操作、字符串切片与格式化(f-string首选)
 - 进阶：函数def/匿名函数lambda、类与对象class、异常处理try-except
 - 模块：import导入用法、常用标准库(os/pathlib文件操作、requests网络请求)
-- 实战：文件读写(with open)、列表增删改查、字典遍历items()
+- 实战：文件读写(with open)、列表增删改查、字典遍历items() python
